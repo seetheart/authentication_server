@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :users
   post '/auth/login', to: 'authentication#login'
+  get '/auth/verify_token', to: 'authentication#authenticate_request'
   get '/*a', to: 'application#not_found'
 end
